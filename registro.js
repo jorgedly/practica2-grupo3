@@ -1,6 +1,6 @@
-function registrar(nombre, correo, contrasena, fechaNacimiento) {
+function registrar(nombre, correo, contrasena, fechaNacimiento, tipoUsuario) {
     if (validarContrasena(contrasena) && validarCorreo(correo)) {
-        const usuario = { nombre, correo, contrasena, fechaNacimiento };
+        const usuario = { nombre, correo, contrasena, fechaNacimiento, tipoUsuario };
         const usuarios = JSON.parse(localStorage.getItem('usuarios'));
         usuarios.push(usuario);
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
